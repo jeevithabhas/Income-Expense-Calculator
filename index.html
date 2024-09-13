@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCOME EXPENSE CALCULATOR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-emerald-200 to-blue-100">
+  
+    <div class="max-w-2xl mx-auto mt-10 p-5 bg-gradient-to-r from-emerald-100 to-blue-200 shadow-md">
+        <h1 class="text-2xl font-bold underline italic mb-5 text-center">INCOME EXPENSE CALCULATOR</h1>
+
+        <div class="mb-5">
+            <label class="block mb-2 text-xl underline font-semibold">Description</label>
+            <input type="text" id="Description" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Enter Description">
+            
+            <label class="block mb-2 text-xl underline font-semibold">Amount</label>
+            <input type="number" id="Amount" class="w-full p-2 border border-gray-300 rounded mb-4" placeholder="Amount">
+        
+            <div class="flex gap-5 mb-4">
+                 <label class="text-l italic text-green-600	">
+                    <input type="radio" name="type" value="Income" checked>Income
+                 </label>
+                 <label class="text-l italic text-red-600">
+                    <input type="radio" name="type" value="Expense">Expense
+                 </label>
+            </div>
+            <button id="add-btn" class="hover:bg-teal-600 font-semibold text-xl bg-teal-300 text-teal-950 p-2 rounded w-full">Add Entry</button>
+        </div>
+        
+        <div class="mb-4">
+            <h2 class="font-semibold text-xl underline mb-2">Filter</h2>
+            <div class="flex gap-5">
+            <label class="italic text-fuchsia-600">
+                <input type="radio" name="Filter" value="all" checked>All
+            </label>
+
+            <label class="italic text-green-600">
+                <input type="radio" name="Filter" value="income">Income
+            </label>
+
+            <label class="text-l italic text-red-600">
+                <input type="radio" name="Filter" value="Expense">Expense
+            </label>
+        </div>
+         </div>
+
+       <div class="text-lg w-full text-black font-semibold shadow-lg rounded mb-8 flex justify-between ">
+        <div>Total Income: ₹<span id="total-income">0</span></div>
+
+        <div>Total Expense: ₹<span id="total-expense">0</span></div>
+        
+        <div>Balance: ₹<span id="Balance">0</span></div>
+        </div>
+        
+        <div>
+        <h2 class="font-semibold text-xl underline mb-3 ">Entries</h2>
+        <ul id="entry-list" class="space-y-2"></ul>
+        </div>
+   
+
+</div>
+    
+<script src="./js/script.js"></script>   
+</body>
+</html>
